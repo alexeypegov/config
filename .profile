@@ -1,16 +1,13 @@
-export GOPATH=$HOME/dev/go
-export PATH=~/bin:$PATH
-export JAVA_HOME="$(/usr/libexec/java_home -v 11.0.0)"
+export PATH=~/bin:/usr/local/go/bin:$PATH
+export JAVA_HOME="$(/usr/libexec/java_home -v 18.0.0)"
+export CLOUD_DOCS=~/Library/Mobile\ Documents/com\~apple\~CloudDocs
 alias st="git status"
 alias load="git stash pop"
 alias pull="git pull"
 alias revert="git reset --hard"
 alias develop="git switch develop"
 alias glog="git log --oneline"
-alias rm=trash
 alias gbr="git branch | grep -v develop | xargs git branch -D"
-alias c1="ssh -l cluster1 pegov-1.dev.alm.works help.sh"
-alias c2="ssh -l cluster2 pegov-1.dev.alm.works help.sh"
 
 save () { 
   if [[ -n $1 ]]; then
@@ -20,10 +17,21 @@ save () {
   fi
 }
 
-gantt () { git sw GANTT-$1 }
-str () { git sw STR-$1 }
-i18n () { git diff --unified=0 $(git log $1 -1 --pretty=%H) HEAD gantt-share/src/main/resources/i18n/GanttMessages_en.properties | grep '^+' > ~/Desktop/i18n.txt }
+cloud () { git sw CLOUD-$1 }
 
-export PATH=/usr/local/opt/node@12/bin:$PATH
-export LDFLAGS="-L/usr/local/opt/node@12/lib"
-export CPPFLAGS="-I/usr/local/opt/node@12/include"
+youtube-mp3 () { youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3 $1 }
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PY_LOCAL="$(python3 -m site --user-base)"
+export PATH=$PY_LOCAL/bin:$PATH
+
+#case $- in *i*)
+#    [ -z "$TMUX" ] && exec tmux a
+#esac
+
+#export PATH=~/.local/bin:$PATH
+
+export BAT_THEME="base16"
+
+[ -f "/Users/alexeypegov/.ghcup/env" ] && source "/Users/alexeypegov/.ghcup/env" # ghcup-env

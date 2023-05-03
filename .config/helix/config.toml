@@ -8,7 +8,7 @@ auto-save = true
 true-color = true
 bufferline = "multiple"
 color-modes = true
-auto-completion = false
+# auto-completion = false
 
 [editor.soft-wrap]
 enable = true

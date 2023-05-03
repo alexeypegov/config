@@ -104,5 +104,3 @@ function marks {
 
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f ~/bin/z.sh ] && . ~/bin/z.sh
-
-[ -f "/Users/alexeypegov/.ghcup/env" ] && source "/Users/alexeypegov/.ghcup/env" # ghcup-env
