@@ -13,5 +13,5 @@
 [pull]
 	rebase = true
 [alias]
-fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
-
+	fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+	save = "!git stash push -m \"$1\" #"
