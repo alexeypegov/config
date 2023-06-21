@@ -8,7 +8,8 @@ auto-save = true
 true-color = true
 bufferline = "multiple"
 color-modes = true
-# auto-completion = false
+# auto-info = false
+auto-completion = false
 
 [editor.soft-wrap]
 enable = true
@@ -29,3 +30,4 @@ select = "underline"
 
 [editor.lsp]
 display-inlay-hints = true
+auto-signature-help = false

@@ -1,0 +1,17 @@
+[core]
+	quotepath = off
+[user]
+	name = Alexey Pegov
+	email = iam@alexeypegov.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true
+[alias]
+fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+

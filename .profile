@@ -1,6 +1,7 @@
 export PATH=~/bin:/usr/local/go/bin:$PATH
 export JAVA_HOME="$(/usr/libexec/java_home -v 18.0.0)"
 export CLOUD_DOCS=~/Library/Mobile\ Documents/com\~apple\~CloudDocs
+export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java17-22.3.1/Contents/Home
 alias st="git status"
 alias load="git stash pop"
 alias pull="git pull"
