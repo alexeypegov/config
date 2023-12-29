@@ -2,7 +2,7 @@
 	quotepath = off
 [user]
 	name = Alexey Pegov
-	email = iam@alexeypegov.com
+	email = alexey@pegov.dev
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -15,3 +15,5 @@
 [alias]
 	fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
 	save = "!git stash push -m \"$1\" #"
+[push]
+	followTags = true
