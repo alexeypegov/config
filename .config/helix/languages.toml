@@ -18,3 +18,4 @@ language-servers = [ "gopls"]
 [[language]]
 name = "gotmpl"
 file-types = ["gotmpl", "tmpl"]
+language-servers = ["gopls", "vscode-html-language-server"]

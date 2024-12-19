@@ -1,9 +1,7 @@
-# theme = "monokai_pro"
-# theme = "sonokai_atlantis"
-theme = "onedark"
+theme = "kanagawa"
 
 [editor]
-cursorline = true
+# cursorline = true
 auto-save = true
 true-color = true
 bufferline = "multiple"
@@ -31,7 +29,7 @@ select = "underline"
 
 [editor.lsp]
 display-inlay-hints = true
-auto-signature-help = false
+auto-signature-help = true
 display-messages = true
 
 [editor.statusline]

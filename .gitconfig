@@ -1,5 +1,6 @@
 [core]
 	quotepath = off
+	pager = delta
 [user]
 	name = Alexey Pegov
 	email = alexey@pegov.dev
@@ -17,13 +18,24 @@
 	save = "!git stash push -m \"$1\" #"
 [push]
 	followTags = true
-[mergetool "juxta"]
-	cmd = juxta _mergetool --base \"${BASE:-/dev/null}\" --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"${MERGED:-/dev/null}\"
-	trustExitCode = true
-[difftool "juxta"]
-	cmd = juxta _difftool --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"$MERGED\"
-	trustExitCode = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+	side-by-side = true
 [merge]
-	tool = juxta
-[diff]
-	tool = juxta
+    conflictstyle = zdiff3
+	
+# [mergetool "juxta"]
+# 	cmd = juxta _mergetool --base \"${BASE:-/dev/null}\" --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"${MERGED:-/dev/null}\"
+# 	trustExitCode = true
+# [difftool "juxta"]
+# 	cmd = juxta _difftool --local \"$LOCAL\" --remote \"$REMOTE\" --merged \"$MERGED\"
+# 	trustExitCode = true
+# [merge]
+# 	tool = juxta
+# [diff]
+# 	tool = juxta
