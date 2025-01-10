@@ -6,6 +6,7 @@ ln -s ~/config/.vimrc ~
 ln -s ~/config/.zshrc ~
 ln -s ~/config/.ghci ~
 ln -s ~/config/.gitconfig ~
+ln -s ~/config/.profile ~
 
 mkdir ~/.config
 
