@@ -21,3 +21,7 @@ ln -s ~/config/.config/kitty/kitty.app.png ~/.config/kitty
 
 mkdir ~/.config/fish
 ln -s ~/config/.config/fish/config.fish ~/.config/fish
+
+mkdir ~/.config/zed
+ln -s ~/config/.config/zed/settings.json ~/.config/zed
+ln -s ~/config/.config/zed/keymap.json ~/.config/zed

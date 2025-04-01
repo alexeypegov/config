@@ -3,11 +3,12 @@ if status is-interactive
     /opt/homebrew/bin/brew shellenv | source
 
     abbr --add fconf "hx ~/.config/fish/config.fish"
-    abbr --add gst "git status"
-    abbr --add ga "git add"
-    abbr --add gp "git push"
-    abbr --add gd "git diff"
-    abbr --add gc "git commit"
 
     set -gx EDITOR hx
 end
+
+# Added by Windsurf
+fish_add_path /Users/alexeypegov/.codeium/windsurf/bin
+
+# Created by `pipx` on 2025-03-15 13:26:48
+set PATH $PATH /Users/alexeypegov/.local/bin
