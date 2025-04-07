@@ -21,12 +21,13 @@
   "edit_predictions": {
     "mode": "subtle"
   },
-  "theme": "One Dark Pro",
+  "theme": "Gruvbox Dark",
   "ui_font_size": 14,
   "buffer_font_size": 13,
   "terminal": {
     "font_size": 11,
-    "font_family": "MonoLisa"
+    "font_family": "MonoLisa",
+    "line_height": "comfortable"
   },
   "ui_font_family": "MonoLisa",
   "buffer_font_family": "MonoLisa",
@@ -35,12 +36,14 @@
       "milliseconds": 1000
     }
   },
+  "soft_wrap": "editor_width",
   "vim_mode": true,
   "vim": {
     "enable_vim_sneak": true
   },
   "show_wrap_guides": true,
-  "wrap_guides": [80],
+  "wrap_guides": [80, 120],
+  "tab_size": 2,
   "confirm_quit": true,
   "scrollbar": {
     "show": "always",
@@ -84,7 +87,13 @@
         "show_parameter_hints": false,
         "show_other_hints": true,
         "show_type_hints": true
-      }
+      },
+      "formatter": "prettier",
+      "format_on_save": "off"
+    },
+    "TSX": {
+      "formatter": "prettier",
+      "format_on_save": "off"
     },
     "Python": {
       "language_servers": ["!pyright", "!pylsp", "ruff"],
@@ -136,6 +145,7 @@
     "folder_icons": false,
     "scrollbar": {
       "show": "auto"
-    }
+    },
+    "entry_spacing": "standard"
   }
 }
