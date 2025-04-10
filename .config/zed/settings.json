@@ -29,6 +29,9 @@
     "font_family": "MonoLisa",
     "line_height": "comfortable"
   },
+  "drag_and_drop": {
+    "enabled": false
+  },
   "ui_font_family": "MonoLisa",
   "buffer_font_family": "MonoLisa",
   "autosave": {
@@ -78,6 +81,17 @@
   },
   "file_finder": {
     "modal_width": "medium"
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "importModuleSpecifier": "relative"
+          }
+        }
+      }
+    }
   },
   "languages": {
     "TypeScript": {
