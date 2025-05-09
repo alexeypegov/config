@@ -1,12 +1,12 @@
 #!/bin/sh
 
-ln -s ~/config/.zprofile ~
-ln -s ~/config/.tmux.conf ~
+#ln -s ~/config/.zprofile ~
+#ln -s ~/config/.tmux.conf ~
 ln -s ~/config/.vimrc ~
-ln -s ~/config/.zshrc ~
+#ln -s ~/config/.zshrc ~
 ln -s ~/config/.ghci ~
 ln -s ~/config/.gitconfig ~
-ln -s ~/config/.profile ~
+#ln -s ~/config/.profile ~
 
 mkdir ~/.config
 
