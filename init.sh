@@ -18,6 +18,7 @@ mkdir ~/.config/kitty
 ln -s ~/config/.config/kitty/theme.conf ~/.config/kitty
 ln -s ~/config/.config/kitty/kitty.conf ~/.config/kitty
 ln -s ~/config/.config/kitty/kitty.app.png ~/.config/kitty
+ln -s ~/config/.config/kitty/afterglow.conf ~/.config/kitty
 
 mkdir ~/.config/fish
 ln -s ~/config/.config/fish/config.fish ~/.config/fish
