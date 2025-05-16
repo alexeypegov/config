@@ -1,0 +1,22 @@
+#!/bin/bash
+WHERE="$1"
+if [ -z "$WHERE" ]; then echo "Usage: $0 <branch-pattern>"; exit 1; fi
+# verify show-ref works
+git show-ref >/dev/null || exit 1
+CANDIDATES=$(git show-ref | perl -ne '/^[^\s]+\s+(refs\/heads\/)(.*)$/ && print $2."\n"' | egrep "$WHERE")
+if [ -z "$CANDIDATES" ]; then
+  # try remote branches
+  CANDIDATES=$(git show-ref | perl -ne '/^[^\s]+\s+(refs\/remotes\/origin\/)(.*)$/ && print $2."\n"' | egrep "$WHERE")
+fi
+if [ -z "$CANDIDATES" ]; then
+  git show-ref
+  echo "-----------------------------------------------"
+  echo "$WHERE didn't match anything"
+  exit 1
+fi
+W=$(echo "$CANDIDATES" | wc -w | tr -d ' ')
+if [ "$W" != "1" ]; then
+  echo "$CANDIDATES"
+  exit 1
+fi
+git checkout $CANDIDATES

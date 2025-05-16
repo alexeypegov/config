@@ -27,3 +27,6 @@
 [ -d ~/.config/zed ] || mkdir ~/.config/zed
 [ -e ~/.config/zed/settings.json ] || ln -s ~/config/.config/zed/settings.json ~/.config/zed
 [ -e ~/.config/zed/keymap.json ] || ln -s ~/config/.config/zed/keymap.json ~/.config/zed
+
+# bin
+[ -d ~/bin ] || ln -s ~/config/bin ~/bin

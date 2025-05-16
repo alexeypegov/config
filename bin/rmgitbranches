@@ -1,0 +1,2 @@
+#!/bin/sh
+git branch -a | grep pegov | awk -F'pegov/' '{print $2}' | while read line ; do git rmrb pegov/$line ; done

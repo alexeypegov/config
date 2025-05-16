@@ -1,0 +1,12 @@
+#!/bin/sh
+set -o errexit
+
+PNGS=`find . -iname "*.png"`
+TMP1="_TMP1.PNG"
+
+echo "Optimizing PNG"
+for PNG in ${PNGS}
+do
+	pngcrush -rem gAMA -rem cHRM -rem iCCP -rem sRGB ${PNG} ${TMP1}
+        mv -f ${TMP1} ${PNG}
+done

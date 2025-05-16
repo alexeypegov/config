@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+  echo "Usage: yt2mp3 youtube-url"
+  exit 1
+fi
+
+youtube-dl --extract-audio --audio-format mp3 --verbose -o "%(title).%(ext)s" "$1"

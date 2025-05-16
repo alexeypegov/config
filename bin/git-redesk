@@ -1,0 +1,19 @@
+#!/bin/bash
+
+date_string=`date +"%Y-%m-%d+%H:%M"`
+stash_name="Saved before redesk at $date_string"
+
+if [ ! -d .git ]; then
+  echo "Not a git repository!"
+  exit 1
+fi
+
+if [[ ! -f $1 ]]; then
+  echo "Usage: git redesk <filename.diff>"
+  exit 1
+fi
+
+git stash push --include-untracked -m "$stash_name"
+echo "Existing changes are stashed as \"$stash_name\""
+git apply --whitespace=nowarn "$1"
+echo "Diff should be applied"

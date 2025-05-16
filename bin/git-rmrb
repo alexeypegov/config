@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -n "$1" ]; then
+  git branch -rd origin/$1
+  git branch -d $1
+else
+    echo "Usage: git rmrb branch"
+fi

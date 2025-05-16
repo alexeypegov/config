@@ -1,0 +1,25 @@
+#!/bin/bash
+
+date_string=`date +"%Y-%m-%d+%H%M"`
+desktop="$HOME/Desktop"
+directory=${PWD##*/}  
+file_path="$desktop/$directory-$date_string.diff"
+
+if [ ! -d .git ]; then
+  echo "Not a git repository!"
+  exit 1
+fi
+
+if [ ! -w "$desktop" ]; then
+  echo "Path $desktop is not writable"
+  exit 1
+fi
+
+git add .
+git diff --cached --no-color > $file_path
+
+if [ $? -eq 0 ]; then
+  echo "Diff has been stored to $file_path"
+else
+  echo "Unable to save the diff!"
+fi
