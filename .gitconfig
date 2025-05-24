@@ -1,6 +1,6 @@
 [core]
 	quotepath = off
-	pager = delta
+;	pager = delta
 [user]
 	name = Alexey Pegov
 	email = alexey@pegov.dev
