@@ -1,9 +1,11 @@
+PACKAGES := profile scripts vim helix zed haskell fish kitty
+
 all:
-	stow --verbose --restow profile
-	stow --verbose --restow scripts
-	stow --verbose --restow vim
-	stow --verbose --restow helix
-	stow --verbose --restow zed
-	stow --verbose --restow haskell
-	stow --verbose --restow fish
-	stow --verbose --restow kitty
+	@for pkg in $(PACKAGES); do \
+		stow --verbose --restow $$pkg; \
+	done
+
+delete:
+	@for pkg in $(PACKAGES); do \
+		stow --verbose --delete $$pkg; \
+	done
