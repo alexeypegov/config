@@ -1,0 +1,43 @@
+theme = "kanagawa"
+
+[editor]
+# cursorline = true
+#auto-save = true
+true-color = true
+bufferline = "multiple"
+color-modes = true
+auto-completion = true
+# line-number = "relative"
+# auto-info = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.soft-wrap]
+enable = true
+
+#[editor.whitespace.render]
+#tab = "all"
+#space = "all"
+#newline = "all"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+auto-signature-help = false
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[editor.file-picker]
+hidden = false
