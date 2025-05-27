@@ -10,7 +10,6 @@ if status is-interactive
     set -gx EDITOR hx
 
     if test -f ~/.config/fish/git.fish
-        echo "enable git fzf"
         source ~/.config/fish/git.fish
         git_fzf_key_bindings
     end
