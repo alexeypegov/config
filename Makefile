@@ -1,4 +1,4 @@
-PACKAGES := profile scripts vim helix zed haskell fish kitty
+PACKAGES := profile scripts vim helix zed haskell fish kitty git
 
 all:
 	@for pkg in $(PACKAGES); do \
