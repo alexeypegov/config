@@ -42,7 +42,8 @@
   "soft_wrap": "editor_width",
   "vim_mode": true,
   "vim": {
-    "enable_vim_sneak": true
+    "enable_vim_sneak": true,
+    "default_mode": "helix_normal"
   },
   "show_wrap_guides": true,
   "wrap_guides": [80, 120],
