@@ -1,5 +1,6 @@
 [core]
 	quotepath = off
+	excludesFile = /Users/alexeypegov/.gitignore_global
 ;	pager = delta
 [user]
 	name = Alexey Pegov
